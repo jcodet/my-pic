@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.rte.titien</groupId>
+  <artifactId>TITIEN</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>TITIEN</name>
+  
+  <dependencies>
+        
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+        	<groupId>ch.qos.logback</groupId>
+        	<artifactId>logback-classic</artifactId>
+        	<version>1.2.2</version>
+        </dependency>
+  </dependencies>
+  
+  <build>
+    <sourceDirectory>D:\workspace\TITIEN\src\main\java</sourceDirectory>
+    <scriptSourceDirectory>D:\workspace\TITIEN\src\scripts</scriptSourceDirectory>
+    <testSourceDirectory>D:\workspace\TITIEN\src\test\java</testSourceDirectory>
+    <outputDirectory>D:\workspace\TITIEN\target\classes</outputDirectory>
+    <testOutputDirectory>D:\workspace\TITIEN\target\test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>D:\workspace\TITIEN\src\main\resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>D:\workspace\TITIEN\src\test\resources</directory>
+      </testResource>
+    </testResources>
+    <directory>D:\workspace\TITIEN\target</directory>
+    <finalName>TITIEN-0.0.1-SNAPSHOT</finalName>
+    <pluginManagement>
+      <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+        	<source>1.8</source>
+        	<target>1.8</target>
+    	</configuration>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>default-testCompile</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    </pluginManagement>
+  </build>
+  
+</project>
