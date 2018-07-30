@@ -1,13 +1,19 @@
 http://www.vogella.com/tutorials/Jenkins/article.html
 
+== INSTALL GIT
+sudo apt -y install git
+
 == INSTALL JAVA
-/usr/java/jdk1.8.0_181-amd64
+sudo apt install openjdk-8-jdk
+
 sudo apt update; sudo apt install oracle-java8-installer
+
 sudo apt install oracle-java8-set-default
 
 == INSTALL DOCKER
 
 sudo apt-get update
+
 sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -22,21 +28,29 @@ sudo add-apt-repository \
    stable"
 
 sudo apt-get update
+
 sudo apt-get install docker-ce
+
 sudo groupadd docker
+
 sudo usermod -aG docker $USER
 
 == INSTALL JENKINS
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
 sudo apt-get update
+
 sudo apt-get install jenkins
 
 -> http://localhost:8080/
 
 == GENERATION CLE PUBLIQUE POUR REPO PRIVE
 sudo -u jenkins ssh-keygen
+
 sudo su jenkins
+
 git ls-remote -h git@github.com:jcodet/my-pic.git HEAD
 
 
